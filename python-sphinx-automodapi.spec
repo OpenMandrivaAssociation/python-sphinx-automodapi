@@ -3,7 +3,7 @@
 Summary:	Sphinx extension to automatically generate API pages for whole modules
 Name:		python-%{module}
 Version:	0.14.1
-Release:	1
+Release:	2
 Source0:	https://github.com/astropy/%{module}/archive/%{module}-%{version}.tar.gz
 License:	ISC
 Group:		Development/Python
