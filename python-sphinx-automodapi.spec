@@ -3,7 +3,7 @@
 Summary:	Sphinx extension to automatically generate API pages for whole modules
 Name:		python-%{module}
 Version:	0.22.0
-Release:	1
+Release:	2
 #Source0:	https://github.com/astropy/sphinx-automodapi/archive/refs/tags/v%{version}.tar.gz
 Source0:	https://files.pythonhosted.org/packages/source/s/sphinx_automodapi/sphinx_automodapi-%{version}.tar.gz
 License:	ISC
@@ -12,8 +12,13 @@ Url:		https://sphinx-doc.org/
 BuildArch:	noarch
 BuildSystem:	python
 BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools-scm)
+BuildRequires:	python%{pyver}dist(wheel)
 BuildRequires:	git-core
+
+%build -p
+export SETUPTOOLS_SCM_PRETEND_VERSION="%{version}"
 
 %description
 HTML help file support for the Sphinx documentation generator.
